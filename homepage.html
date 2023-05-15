@@ -32,7 +32,7 @@
         <a href="#" style="text-decoration: none; color: black;" ;>Reports</a><br><br>
         <a href="#" style="text-decoration: none; color: black;" ;>Settings</a><br>
         <hr>
-        Sign out
+        <a href="index.html"><button style="background-color: white; border: none; cursor: pointer;">Logout</button></a>
 
       </div>
     </div>
@@ -119,7 +119,17 @@ form.addEventListener('submit', function(event) {
   document.getElementById('description').value = '';
   document.getElementById('amount').value = '';
 });
+      // Logout module
+    const logoutButton = document.getElementById('logout-btn');
+    logoutButton.addEventListener('click', function () {
+      // Clear the authentication token or session information
+      localStorage.removeItem('authToken'); // Example for clearing auth token stored in localStorage
+      sessionStorage.clear(); // Example for clearing session information
 
+      // Redirect the user to the login page
+      window.location.href = '/login.html'; // Change the URL to your login page
+    });
+    
   </script>
 </body>
 
