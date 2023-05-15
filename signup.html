@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Sign Up</title>
+</head>
+
+<body>
+    <div class="container">
+        <form action="Congrats.html">
+            <h1>Sign Up</h1>
+            <label for="first-name">First Name *</label>
+            <input type="text" placeholder="Enter First Name" name="first-name" required>
+
+            <label for="last-name">Last Name *</label>
+            <input type="text" placeholder="Enter Last Name" name="last-name">
+
+            <label for="email">Email Address *</label>
+            <input type="text" placeholder="Enter valid email address" name="email">
+
+            <label for="password">Password *</label>
+            <input type="password" placeholder="Set a password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                title="Password must contain at least one number, one uppercase letter, one lowercase letter, and be at least 8 characters long"
+                id="password" name="password">
+
+            <label for="confirm-password">Confirm Password * </label>
+            <input type="password" placeholder="Re-enter password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                title="Password must contain at least one number, one uppercase letter, one lowercase letter, and be at least 8 characters long"
+                id="confirm-password" name="confirm-password" onkeyup='checkPasswordMatch();'>
+            <div id="password-match"></div>
+            <br>
+
+            <button type="submit" class="btn-primary">Sign Up</button>
+        </form>
+
+        <script>
+
+
+
+            function checkPasswordMatch() {
+                var password = document.getElementById("password");
+                var confirm_password = document.getElementById("confirm-password");
+                var password_match = document.getElementById("password-match");
+
+                if (password.value == confirm_password.value) {
+                    password_match.innerHTML = "Passwords match";
+                    password_match.className = "match";
+                } else {
+                    password_match.innerHTML = "Passwords do not match";
+                    password_match.className = "no-match";
+                }
+
+            }
+
+
+        </script>
+
+    </div>
+
+</body>
+
+</html>

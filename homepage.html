@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Expense Tracker</title>
+  <link rel="stylesheet" href="homepage-style.css">
+
+  </style>
+</head>
+
+<body>
+  <header>
+
+    <h1>Expense Tracker</h1>
+
+    <div class="dropdown">
+      <a href="#" id="menu-toggle">
+        <span>
+          <img
+            src="https://images.unsplash.com/photo-1526547541286-73a7aaa08f2a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80"
+            class="profile-pic" alt="Profile Picture">
+          <span id="menu-text">Menu</span>
+        </span>
+      </a>
+
+      <div class="dropdown-content">
+        <p>Signed in as</p>
+        <p><strong>Test User</strong></p>
+        <hr>
+        <a href="#" class="dropdown-item" style="text-decoration: none; color: black;" ;>Your Profile</a><br><br>
+        <a href="#" style="text-decoration: none; color: black;" ;>Reports</a><br><br>
+        <a href="#" style="text-decoration: none; color: black;" ;>Settings</a><br>
+        <hr>
+        Sign out
+
+      </div>
+    </div>
+
+  </header>
+  <section class="expenses">
+    <h2>Expenses</h2>
+    <ul>
+      <li>
+        <span class="date" style="font-weight: bold;">Date</span>
+        <span class="details" style="font-weight: bold;">Details</span>
+        <span class="amount" style="font-weight: bold;">Amount</span>
+      </li>
+      <li>
+        <span class="date">May 1, 2023</span>
+        <span class="description">Groceries</span>
+        <span class="amount">$50.00</span>
+      </li>
+      <li>
+        <span class="date">May 3, 2023</span>
+        <span class="description">Gas</span>
+        <span class="amount">$30.00</span>
+      </li>
+    </ul>
+    <hr style="font-weight: bold; height: 1.3px; background-color: black;">
+    <div class="total">
+      <span>Total:</span>
+      <span id="total-amount">$80.00</span>
+    </div>
+  </section>
+
+  <section class="add-expense" style="text-align: left;">
+    <h2>Add Expense</h2>
+    <form>
+      <div class="form-group">
+        <label for="date">Date:</label>
+        <input type="date" id="date" name="date" class="form-control" required>
+      </div>
+      <div class="form-group">
+        <label for="description">Description:</label>
+        <input type="text" id="description" name="description" class="form-control">
+      </div>
+      <div class="form-group">
+        <label for="amount">Amount:</label>
+        <input type="number" id="amount" name="amount" step="0.01" class="form-control" required>
+      </div>
+      <div class="form-group">
+        <button type="submit" class="btn btn-primary">Add Expense</button>
+      </div>
+    </form>
+  </section>
+  <script>
+    const form = document.querySelector('form');
+const expensesList = document.querySelector('.expenses ul');
+const totalAmount = document.getElementById('total-amount');
+
+let total = 0;
+
+form.addEventListener('submit', function(event) {
+  event.preventDefault();
+
+  const date = document.getElementById('date').value;
+  const description = document.getElementById('description').value;
+  const amount = parseFloat(document.getElementById('amount').value);
+
+  const li = document.createElement('li');
+  const dateSpan = document.createElement('span');
+  const descriptionSpan = document.createElement('span');
+  const amountSpan = document.createElement('span');
+
+  dateSpan.textContent = date;
+  descriptionSpan.textContent = description;
+  amountSpan.textContent = '$' + amount.toFixed(2);
+
+  li.appendChild(dateSpan);
+  li.appendChild(descriptionSpan);
+  li.appendChild(amountSpan);
+  expensesList.appendChild(li);
+
+  total += amount;
+  totalAmount.textContent = '$' + total.toFixed(2);
+
+  document.getElementById('date').value = '';
+  document.getElementById('description').value = '';
+  document.getElementById('amount').value = '';
+});
+
+  </script>
+</body>
+
+</html>

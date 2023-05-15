@@ -1,0 +1,137 @@
+body {
+  align-content: center;
+  font-family: Arial, sans-serif;
+  background-color: #f8f8f8;
+  margin: 0;
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+}
+
+.dropdown {
+  position: absolute;
+  top: 6%;
+  right: 5%;
+  transform: translate(50%, -50%);
+}
+
+#menu-text {
+  margin-left: 5px;
+}
+
+#menu-toggle{
+  text-decoration: none;
+  color: white;
+}
+
+.dropdown span{
+  display: flex;
+  align-items: center;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  padding: 12px 16px;
+  z-index: 1;
+  color: black;
+  width: 120%;
+  right: 0%;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Style the profile picture */
+.profile-pic {
+  align-items: r;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 32px;
+  text-align: center;
+}
+
+section {
+  padding: 20px;
+  margin: 20px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+section h2 {
+  margin-top: 0;
+  font-size: 24px;
+}
+
+section.expenses ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+section.expenses li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ddd;
+  padding: 10px 0;
+}
+
+section.expenses li:last-child {
+  border-bottom: none;
+}
+
+section.expenses .date {
+  flex-basis: 25%;
+}
+
+
+section.expenses .amount {
+  flex-basis: 25%;
+  text-align: right;
+}
+
+section.add-expense form {
+  display: flex;
+  flex-direction: column;
+}
+
+section.add-expense form .form-group {
+  margin-bottom: 15px;
+}
+
+section .total{
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+  text-align: right;
+}
+
+ 
+.form-group label {
+  color: #555;
+}
+.form-control {
+  border-color: #777;
+  color: #555;
+}
+.btn-primary {
+  background-color: #4caf50;
+  border-color: #4caf50;
+}
+.btn-primary:hover {
+  background-color: #4caf50;
+  border-color: #4caf50;
+}
