@@ -7,6 +7,6 @@ I built this webpage to help youngsters, sepecially students at college and univ
 Contributions are highly appreciated here.
 
 ## Event
-I have bring this idea into real world on the ocassion of:
+I have bring this idea into real world on the occasion of:
 #### Hackmakers World Innovation Day Hack 2023 Hackathon
 
