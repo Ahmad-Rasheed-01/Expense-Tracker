@@ -1,5 +1,5 @@
 # Expense Tracker
-#### 📢 for testing purpose, only test user is functional
+##### 📢 Only test user is functional till now
 ### Credentials
     Email: user@example.com
     Password: Password!23
