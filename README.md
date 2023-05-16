@@ -1,8 +1,8 @@
+# Expense Tracker
 #### 📢 for testing purpose, only test user is functional
 ### Credentials
     Email: user@example.com
     Password: Password!23
-# Expense Tracker
 ## Link to the webpage
 <a href="https://expense-record-tracker.netlify.app/" target="_blank">Expense Tracker</a>
 <!--[Expense Tracker](https://expense-record-tracker.netlify.app/){:target="_blank"}-->
