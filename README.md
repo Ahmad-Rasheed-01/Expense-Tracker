@@ -2,7 +2,6 @@
 ### Credentials
     Email: user@example.com
     Password: Password!23
-#### pass
 # Expense Tracker
 ## Link to the webpage
     https://expense-record-tracker.netlify.app/
